@@ -34,11 +34,11 @@ Get the script:
 
     If you need to install the latest development version
 
-        brew unlink pidcat  
+        brew unlink pidcat
         brew install --HEAD pidcat
-  
+
  * Arch Linux : Install the package called `pidcat-git` from the [AUR][4].
- 
+
  * Others: Download the `pidcat.py` and place it on your PATH.
 
 
@@ -56,6 +56,16 @@ Include these lines in your `.bashrc` or `.zshrc`.
 On Widnows add `<path to Android SDK>/platform-tools` and `<path to Android SDK>/tools` to your PATH in [System Properties](https://support.microsoft.com/en-sg/help/310519/how-to-manage-environment-variables-in-windows-xp)
 
 *Note:* `<path to Android SDK>` should be absolute and not relative.
+
+`pidcat` requires at least version 8.30 of `coreutils`. Ubuntu 20.04 LTS already ships
+with it, for 18.04 and below, `coreutils` can be upgraded from the `focal` repo by running
+the following:
+
+```shell
+sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse'
+sudo apt-get update
+sudo apt-get -t focal install coreutils
+```
 
  [1]: http://jsharkey.org/blog/2009/04/22/modifying-the-android-logcat-stream-for-full-color-debugging/
  [2]: http://brew.sh
